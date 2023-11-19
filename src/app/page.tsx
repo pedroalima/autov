@@ -1,9 +1,9 @@
-
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <main>
-      <h1>Auto V</h1>
+      <Navbar />
     </main>
   )
 }
