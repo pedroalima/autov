@@ -15,7 +15,7 @@ export default function Navbar() {
     };
 
     return (
-        <M.Box>
+        <>
             <M.AppBar component="nav">
                 <M.Toolbar>
                     <M.Typography
@@ -49,6 +49,6 @@ export default function Navbar() {
             <nav>
                 <Drawer navItems={navItems} mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
             </nav>
-        </M.Box>
+        </>
     )
 }
