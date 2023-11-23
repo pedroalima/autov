@@ -1,9 +1,9 @@
 import * as M from "@mui/material";
-import Image from 'next/image'
+import Image from "next/image";
 
-export default function Home() {
-	return (
-		<M.Box component="main">
+export default function Corvett() {
+    return (
+        <M.Box component="main">
 			<M.Grid container minHeight="90vh">
 				<M.Grid 
 					item xs={12} 
@@ -45,5 +45,5 @@ export default function Home() {
 				</M.Grid>
 			</M.Grid>
 		</M.Box>
-	);
+    )
 }
