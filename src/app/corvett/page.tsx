@@ -15,6 +15,7 @@ export default function Corvett() {
 				>
 					<Image
 						src="/corvett.png"
+						priority
 						width={360}
 						height={250}
 						alt="Picture of the author"
