@@ -1,6 +1,7 @@
 "use client";
 
 import * as M from "@mui/material";
+import Link from "next/link";
 
 interface Props {
     window?: () => Window;
@@ -19,11 +20,13 @@ export default function Drawer(props: Props) {
 		<M.Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
 			<M.List>
 				{navItems.map((item) => (
-					<M.ListItem key={item} disablePadding>
-						<M.ListItemButton sx={{ textAlign: "center" }}>
-							<M.ListItemText primary={item} />
-						</M.ListItemButton>
-					</M.ListItem>
+					<Link key={item} href={`/${item}`}>
+						<M.ListItem  disablePadding>
+								<M.ListItemButton sx={{ textAlign: "center" }}>
+									<M.ListItemText primary={item} />
+								</M.ListItemButton>
+						</M.ListItem>
+					</Link>
 				))}
 			</M.List>
 		</M.Box>
