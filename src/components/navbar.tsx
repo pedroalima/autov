@@ -4,8 +4,9 @@ import { useState } from "react";
 import * as M from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import Drawer from "./drawer";
+import Link from "next/link";
 
-const navItems = ["Home"];
+const navItems = ["corvett", "mustang"];
 
 export default function Navbar() {
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -39,9 +40,11 @@ export default function Navbar() {
                     
 					<M.Box sx={{ display: { xs: "none", sm: "block" } }}>
 						{navItems.map((item) => (
-							<M.Button key={item} sx={{ color: "#fff" }}>
-								{item}
-							</M.Button>
+							<Link href={`/${item}`} key={item}>
+								<M.Button sx={{ color: "#fff" }}>
+									{item}
+								</M.Button>
+							</Link>
 						))}
 					</M.Box>
 				</M.Toolbar>
