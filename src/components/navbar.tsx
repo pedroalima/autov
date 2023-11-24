@@ -6,7 +6,7 @@ import { Menu } from "@mui/icons-material";
 import Drawer from "./drawer";
 import Link from "next/link";
 
-const navItems = ["corvett", "mustang"];
+const navItems = ["corvett", "mustang", "camaro"];
 
 export default function Navbar() {
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<M.AppBar component="nav">
+			<M.AppBar component="nav" color="primary">
 				<M.Toolbar>
 					<M.Typography
 						variant="h6"
