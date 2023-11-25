@@ -2,8 +2,8 @@ import * as M from "@mui/material";
 import Image from "next/image";
 
 export default function Mustang() {
-    return (
-        <M.Box component="main">
+	return (
+		<M.Box component="main">
 			<M.Grid container minHeight="90vh">
 				<M.Grid 
 					item xs={12} 
@@ -15,7 +15,7 @@ export default function Mustang() {
 				>
 					<Image
 						src="/mustang.png"
-                        priority
+						priority
 						width={360}
 						height={250}
 						alt="Picture of the author"
@@ -46,5 +46,5 @@ export default function Mustang() {
 				</M.Grid>
 			</M.Grid>
 		</M.Box>
-    )
+	);
 }

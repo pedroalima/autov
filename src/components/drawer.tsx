@@ -22,9 +22,9 @@ export default function Drawer(props: Props) {
 				{navItems.map((item) => (
 					<Link key={item} href={`/${item}`}>
 						<M.ListItem  disablePadding>
-								<M.ListItemButton sx={{ textAlign: "center" }}>
-									<M.ListItemText primary={item} />
-								</M.ListItemButton>
+							<M.ListItemButton sx={{ textAlign: "center" }}>
+								<M.ListItemText primary={item} />
+							</M.ListItemButton>
 						</M.ListItem>
 					</Link>
 				))}

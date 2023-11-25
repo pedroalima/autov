@@ -1,5 +1,5 @@
 export const data = [
-    { 
+    {
         corvett: {
             horsepower: 495,
             accelerationTime: 2.9,
