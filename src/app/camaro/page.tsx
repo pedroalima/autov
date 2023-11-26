@@ -1,8 +1,11 @@
+import StatusCar from "@/components/statusCar";
 import { data } from "@/utils/data";
 import * as M from "@mui/material";
 import Image from "next/image";
 
 export default function Camaro() {
+	const dataCamaro = data[1];
+
 	return (
 		<M.Box component="main">
 			<M.Grid container minHeight="90vh">
@@ -33,20 +36,12 @@ export default function Camaro() {
 					gap="2rem"
 				>
 					<M.Box textAlign="center">
-						<M.Typography component="h3">Camaro</M.Typography>
+						<M.Typography component="h3">{data[1].name}</M.Typography>
 						<M.Typography component="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
 						<M.Typography component="a">Site</M.Typography>
 					</M.Box>
 
-					<M.Card sx={{ width: "90%"}}>
-						{data && data.map(veiculo => (
-							<M.CardContent key={veiculo.camaro?.name} sx={{ display: "flex", justifyContent: "space-between"}}>
-								<M.Typography component="h6">Velocidade Máxima</M.Typography>
-								<M.Typography component="span">{veiculo.camaro?.maxSpeed} km</M.Typography>
-							</M.CardContent>
-						))}
-						
-					</M.Card>
+					<StatusCar data={dataCamaro} />
 				</M.Grid>
 			</M.Grid>
 		</M.Box>
