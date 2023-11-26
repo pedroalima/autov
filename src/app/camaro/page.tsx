@@ -1,9 +1,10 @@
+import { data } from "@/utils/data";
 import * as M from "@mui/material";
 import Image from "next/image";
 
 export default function Camaro() {
-    return (
-        <M.Box component="main">
+	return (
+		<M.Box component="main">
 			<M.Grid container minHeight="90vh">
 				<M.Grid 
 					item xs={12} 
@@ -15,7 +16,7 @@ export default function Camaro() {
 				>
 					<Image
 						src="/camaro.png"
-                        priority
+						priority
 						width={360}
 						height={250}
 						alt="Picture of the author"
@@ -32,19 +33,22 @@ export default function Camaro() {
 					gap="2rem"
 				>
 					<M.Box textAlign="center">
-						<M.Typography component="h3">Corvertt</M.Typography>
+						<M.Typography component="h3">Camaro</M.Typography>
 						<M.Typography component="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
 						<M.Typography component="a">Site</M.Typography>
 					</M.Box>
 
 					<M.Card sx={{ width: "90%"}}>
-						<M.CardContent sx={{ display: "flex", justifyContent: "space-between"}}>
-							<M.Typography component="h6">Exemplo</M.Typography>
-							<M.Typography component="span">135415 km</M.Typography>
-						</M.CardContent>
+						{data && data.map(veiculo => (
+							<M.CardContent key={veiculo.camaro?.name} sx={{ display: "flex", justifyContent: "space-between"}}>
+								<M.Typography component="h6">Velocidade Máxima</M.Typography>
+								<M.Typography component="span">{veiculo.camaro?.maxSpeed} km</M.Typography>
+							</M.CardContent>
+						))}
+						
 					</M.Card>
 				</M.Grid>
 			</M.Grid>
 		</M.Box>
-    )
+	);
 }
