@@ -5,6 +5,7 @@ import * as M from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import Drawer from "./drawer";
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = ["corvett", "mustang", "camaro"];
 
@@ -17,15 +18,24 @@ export default function Navbar() {
 
 	return (
 		<>
-			<M.AppBar component="nav" color="primary">
+			<M.AppBar component="nav" color="transparent" sx={{ boxShadow: "none"}}>
 				<M.Toolbar>
 					<M.Typography
 						variant="h6"
 						component="div"
 						textTransform="uppercase"
+						fontWeight={700}
 						sx={{ flexGrow: 1 }}
 					>
-                        Auto V
+						<Link href="/" >
+							<Image
+								src="/logo.png"
+								priority
+								width={75}
+								height={16}
+								alt="Picture of the author"
+							/>
+						</Link>
 					</M.Typography>
 
 					<M.IconButton

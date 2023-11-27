@@ -36,7 +36,7 @@ export default function Camaro() {
 					gap="2rem"
 				>
 					<M.Box textAlign="center">
-						<M.Typography component="h3">{data[1].name}</M.Typography>
+						<M.Typography component="h3">Camaro</M.Typography>
 						<M.Typography component="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
 						<M.Typography component="a">Site</M.Typography>
 					</M.Box>
