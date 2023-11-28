@@ -1,6 +1,5 @@
 import * as M from "@mui/material";
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
 	return (
@@ -17,14 +16,10 @@ export default function Home() {
 						justifyContent="center" 
 						alignItems="center"
 						minHeight={325}
+						paddingTop="50vh"
+						textAlign="center"
 					>
-						<Image
-							src="/section1.png"
-							priority
-							width={360}
-							height={250}
-							alt="Picture of the author"
-						/>
+						<M.Typography variant="h4" color="white">Potência e elegancia</M.Typography>
 					</M.Grid>
 
 					<M.Grid 
