@@ -1,7 +1,6 @@
 import * as M from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -9,7 +8,7 @@ export default function Home() {
 			<Head>
 				<title>AutoV</title>
 			</Head>
-			<M.Box component="main" className="background">
+			<M.Box>
 				<M.Grid container minHeight="90vh">
 					<M.Grid 
 						item xs={12} 
@@ -19,15 +18,13 @@ export default function Home() {
 						alignItems="center"
 						minHeight={325}
 					>
-						<Link href="/">
-							<Image
-								src="/section1.png"
-								priority
-								width={360}
-								height={250}
-								alt="Picture of the author"
-							/>
-						</Link>
+						<Image
+							src="/section1.png"
+							priority
+							width={360}
+							height={250}
+							alt="Picture of the author"
+						/>
 					</M.Grid>
 
 					<M.Grid 
