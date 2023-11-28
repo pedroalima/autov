@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar";
 import { Theme } from "@/theme";
 import { ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
+import style from "./style.module.css";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
 	title: "Auto V",
@@ -16,9 +18,16 @@ export default function RootLayout({
 	return (
 		<ThemeProvider theme={Theme}>
 			<html lang="en">
-				<body>
-					<Navbar />
-					{children}
+				<body style={{ padding: 0, margin: 0}}>
+					<header>
+						<Navbar />
+					</header>
+
+					<main className={style.mainBg}>
+						{children}
+					</main>
+
+					<Footer />
 				</body>
 			</html>
 		</ThemeProvider>
