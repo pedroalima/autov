@@ -1,5 +1,6 @@
 import * as M from "@mui/material";
 import Head from "next/head";
+import { Memory } from "@mui/icons-material";
 
 export default function Home() {
 	return (
@@ -8,7 +9,7 @@ export default function Home() {
 				<title>AutoV</title>
 			</Head>
 			<M.Box>
-				<M.Grid container minHeight="90vh">
+				<M.Grid container>
 					<M.Grid 
 						item xs={12} 
 						sm={6} 
@@ -16,10 +17,11 @@ export default function Home() {
 						justifyContent="center" 
 						alignItems="center"
 						minHeight={325}
-						paddingTop="50vh"
+						paddingTop="70vh"
+						marginBottom="5rem"
 						textAlign="center"
 					>
-						<M.Typography variant="h4" color="white">Potência e elegancia</M.Typography>
+						<M.Typography variant="h4" textTransform="uppercase" color="white">Potência e elegancia</M.Typography>
 					</M.Grid>
 
 					<M.Grid 
@@ -31,16 +33,19 @@ export default function Home() {
 						alignItems="center"
 						gap="2rem"
 					>
-						<M.Box textAlign="center">
-							<M.Typography component="h3">Corvertt</M.Typography>
-							<M.Typography component="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
-							<M.Typography component="a">Site</M.Typography>
-						</M.Box>
-
-						<M.Card sx={{ width: "90%"}}>
-							<M.CardContent sx={{ display: "flex", justifyContent: "space-between"}}>
-								<M.Typography component="h6">Exemplo</M.Typography>
-								<M.Typography component="span">135415 km</M.Typography>
+						<M.Card sx={{ width: "90%", textAlign: "center", paddingY: "3rem", marginBottom: "2rem" }}>
+							<M.Typography variant="h5" textTransform="uppercase" paddingBottom="2rem">Encontre sua força</M.Typography>
+							<M.CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem"}}>
+								<Memory />
+								<M.Typography component="span">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
+							</M.CardContent>
+							<M.CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem"}}>
+								<Memory />
+								<M.Typography component="span">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
+							</M.CardContent>
+							<M.CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem"}}>
+								<Memory />
+								<M.Typography component="span">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
 							</M.CardContent>
 						</M.Card>
 					</M.Grid>
