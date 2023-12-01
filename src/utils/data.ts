@@ -1,4 +1,17 @@
-export const data = [
+export interface DataElementType {
+	name: string;
+	horsepower: number;
+	accelerationTime: number;
+	maxSpeed: number;
+}
+
+export type DataType = [
+	DataElementType,
+	DataElementType,
+	DataElementType
+]
+
+export const data: DataType = [
 	{
 		name: "corvett",
 		horsepower: 495,

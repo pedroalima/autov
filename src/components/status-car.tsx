@@ -9,7 +9,7 @@ type DataType = {
 
 export default function StatusCar ({data} : { data: DataType}) {
 	return (
-		<M.Box sx={{ width: "90%", display: "flex", flexDirection: "column", gap: "0.5rem"}}>
+		<M.Box sx={{ display: "flex", flexDirection: "column", gap: "0.5rem"}}>
 			<M.Box sx={{ display: "flex", justifyContent: "space-between", border: "1px solid #e2e2e2", borderRadius: "10px", padding: "0.5rem"}}>
 				<M.Typography component="h6">Vel. Máxima</M.Typography>
 				<M.Typography component="span">{data.maxSpeed} KM</M.Typography>
