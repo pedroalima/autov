@@ -9,27 +9,27 @@ export default function Home() {
 				<title>AutoV</title>
 			</Head>
 			<M.Box>
-				<M.Grid container>
+				<M.Grid container display="flex" justifyContent="space-evenly" alignItems="center">
 					<M.Grid 
 						item xs={12} 
-						sm={6} 
-						display="flex" 
-						justifyContent="center" 
-						alignItems="center"
+						sm={4}
 						minHeight={325}
-						paddingTop="70vh"
-						marginBottom="5rem"
 						textAlign="center"
+						height="70vh"
+						marginBottom="5rem"
+						display="flex" 
+						alignItems="end"
+						
 					>
 						<M.Typography variant="h4" textTransform="uppercase" color="white">Potência e elegancia</M.Typography>
 					</M.Grid>
 
 					<M.Grid 
 						item xs={12} 
-						sm={6} 
+						sm={4} 
 						display="flex" 
 						flexDirection="column" 
-						justifyContent="center" 
+						justifyContent="center"
 						alignItems="center"
 						gap="2rem"
 					>
