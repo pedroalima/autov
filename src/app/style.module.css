@@ -4,3 +4,13 @@
     background-size: auto 60%;
     background-repeat: no-repeat;
 }
+
+@media screen and (min-width: 720px) {
+    .mainBg {
+        background-image: url("/desktop.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+  }
+

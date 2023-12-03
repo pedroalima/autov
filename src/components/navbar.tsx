@@ -31,8 +31,8 @@ export default function Navbar() {
 							<Image
 								src="/logo.png"
 								priority
-								width={75}
-								height={16}
+								width={82}
+								height={24}
 								alt="Picture of the author"
 							/>
 						</Link>
@@ -48,10 +48,10 @@ export default function Navbar() {
 						<Menu />
 					</M.IconButton>
                     
-					<M.Box sx={{ display: { xs: "none", sm: "block" } }}>
+					<M.Box sx={{ display: { xs: "none", sm: "flex" }, gap: "2rem" }}>
 						{navItems.map((item) => (
 							<Link href={`/${item}`} key={item}>
-								<M.Button sx={{ color: "#fff" }}>
+								<M.Button variant="outlined" color="primary">
 									{item}
 								</M.Button>
 							</Link>

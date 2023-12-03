@@ -20,7 +20,7 @@ export default function PageCar({ dataCar } : { dataCar: DataElementType}) {
 					<Image
 						src={`/${dataCar.name}.png`}
 						priority
-						width={360}
+						width={430}
 						height={250}
 						alt="Picture of the author"
 					/>
@@ -35,7 +35,7 @@ export default function PageCar({ dataCar } : { dataCar: DataElementType}) {
 					alignItems="center"
 					gap="2rem"
 				>
-					<M.Card sx={{ width: "85%", padding: "2rem 0.5rem", marginBottom: "5rem"}}>
+					<M.Card sx={{ width: "85%", padding: "2rem 0.5rem", margin: "2rem 2rem"}}>
 						<M.Box textAlign="center">
 							<M.Typography component="h2" variant="h4" textTransform="capitalize">{`${dataCar.name}`}</M.Typography>
 							<M.Typography component="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</M.Typography>
