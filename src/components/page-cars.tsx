@@ -1,9 +1,14 @@
 import StatusCar from "@/components/status-car";
 import { DataElementType } from "@/utils/data";
+// import { useTheme } from "@mui/material/styles";
+// import useMediaQuery from "@mui/material/useMediaQuery";
 import * as M from "@mui/material";
 import Image from "next/image";
 
 export default function PageCar({ dataCar } : { dataCar: DataElementType}) {
+	// const theme = useTheme();
+	// const smDown = useMediaQuery(theme.breakpoints.down("sm"));
+	
 	return (
 		<M.Box component="main">
 			<M.Grid container>
