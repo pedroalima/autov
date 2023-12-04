@@ -18,7 +18,11 @@ export default function RootLayout({
 	return (
 		<ThemeProvider theme={Theme}>
 			<html lang="en">
-				<body style={{ padding: 0, margin: 0}}>
+				<body style={{ 
+					boxSizing: "border-box",
+					padding: 0,
+					margin: 0,
+				}}>
 					<header>
 						<Navbar />
 					</header>

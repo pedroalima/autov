@@ -1,16 +1,19 @@
 "use client";
-
 import { useState } from "react";
 import * as M from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import Drawer from "./drawer";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const navItems = ["corvett", "mustang", "camaro"];
 
 export default function Navbar() {
 	const [mobileOpen, setMobileOpen] = useState(false);
+	const theme = useTheme();
+	const smDown = useMediaQuery(theme.breakpoints.down("sm"));
 
 	const handleDrawerToggle = () => {
 		setMobileOpen((prevState) => !prevState);
@@ -18,7 +21,13 @@ export default function Navbar() {
 
 	return (
 		<>
-			<M.AppBar component="nav" color="transparent" sx={{ boxShadow: "none"}}>
+			<M.AppBar 
+				component="nav"  
+				color="transparent"
+				sx={{ 
+					boxShadow: "0px 5px 0.8rem #0000005b",
+					background: "#0000005b"
+				}}>
 				<M.Toolbar>
 					<M.Typography
 						variant="h6"
@@ -31,8 +40,8 @@ export default function Navbar() {
 							<Image
 								src="/logo.png"
 								priority
-								width={82}
-								height={24}
+								width={smDown ? 82 : 78}
+								height={smDown ? 24 : 20}
 								alt="Picture of the author"
 							/>
 						</Link>
@@ -51,7 +60,7 @@ export default function Navbar() {
 					<M.Box sx={{ display: { xs: "none", sm: "flex" }, gap: "2rem" }}>
 						{navItems.map((item) => (
 							<Link href={`/${item}`} key={item}>
-								<M.Button variant="outlined" color="primary">
+								<M.Button variant="outlined" color="secondary">
 									{item}
 								</M.Button>
 							</Link>

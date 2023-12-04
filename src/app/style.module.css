@@ -1,15 +1,15 @@
 .mainBg {
     background-image: url("/mobile.jpg");
     background-position: top;
-    background-size: auto 60%;
+    background-size: auto 40%;
     background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 720px) {
     .mainBg {
         background-image: url("/desktop.jpg");
-        background-position: center;
-        background-size: cover;
+        background-position: top;
+        background-size: 100% 60%;
         background-repeat: no-repeat;
     }
   }
