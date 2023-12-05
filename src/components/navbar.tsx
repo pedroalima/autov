@@ -5,15 +5,11 @@ import { Menu } from "@mui/icons-material";
 import Drawer from "./drawer";
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 const navItems = ["corvett", "mustang", "camaro"];
 
 export default function Navbar() {
 	const [mobileOpen, setMobileOpen] = useState(false);
-	const theme = useTheme();
-	const smDown = useMediaQuery(theme.breakpoints.down("sm"));
 
 	const handleDrawerToggle = () => {
 		setMobileOpen((prevState) => !prevState);
@@ -40,8 +36,8 @@ export default function Navbar() {
 							<Image
 								src="/logo.png"
 								priority
-								width={smDown ? 82 : 78}
-								height={smDown ? 24 : 20}
+								width={75}
+								height={18}
 								alt="Picture of the author"
 							/>
 						</Link>
