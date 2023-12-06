@@ -1,9 +1,8 @@
 import Navbar from "@/components/navbar";
-import { Theme } from "@/theme";
-import { ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
 import style from "./style.module.css";
 import Footer from "@/components/footer";
+import ThemeRegistry from "./ThemeRegistry";
 
 export const metadata: Metadata = {
 	title: "Auto V",
@@ -16,24 +15,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 	return (
-		<ThemeProvider theme={Theme}>
-			<html lang="en">
-				<body style={{ 
-					boxSizing: "border-box",
-					padding: 0,
-					margin: 0,
-				}}>
+		<html lang="en">
+			<body style={{ 
+				boxSizing: "border-box",
+				padding: 0,
+				margin: 0,
+			}}>
+				<ThemeRegistry options={{ key: "mui" }}>
 					<header>
 						<Navbar />
 					</header>
-
 					<main className={style.mainBg}>
 						{children}
 					</main>
-
 					<Footer />
-				</body>
-			</html>
-		</ThemeProvider>
+				</ThemeRegistry>
+			</body>
+		</html>
 	);
 }
