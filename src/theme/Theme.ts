@@ -20,5 +20,12 @@ export const Theme = createTheme({
 			default: "#F7F6F3",
 			paper: "#FFFFFF",
 		}
+	},
+	typography: {
+		fontFamily: [
+			"Apple Color Emoji",
+			"Segoe UI Emoji",
+			"Segoe UI Symbol",
+		].join(","),
 	}
 });
