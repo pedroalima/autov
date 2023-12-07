@@ -1,6 +1,6 @@
 "use client";
 import * as M from "@mui/material";
-import { Memory } from "@mui/icons-material";
+import { Explore, Speed, Bolt } from "@mui/icons-material";
 
 export default function Home() {
 	const theme = M.useTheme();
@@ -58,15 +58,15 @@ export default function Home() {
 							padding="2rem 0"
 						>Encontre a força</M.Typography>
 						<M.CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem"}}>
-							<Memory />
+							<Speed fontSize="large" />
 							<M.Typography component="span" variant="h6">Desbrave o mundo automotivo e mergulhe no coração das máquinas mais poderosas do mercado. Descubra o que está sob o capô e sinta a adrenalina da verdadeira performance.</M.Typography>
 						</M.CardContent>
 						<M.CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem"}}>
-							<Memory />
+							<Explore fontSize="large" />
 							<M.Typography component="span" variant="h6">Explore a revolução sob o capô dos carros modernos. De motores impressionantes a tecnologias avançadas, nossa cobertura detalhada levará você a uma jornada através da potência automotiva.</M.Typography>
 						</M.CardContent>
 						<M.CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem"}}>
-							<Memory />
+							<Bolt fontSize="large" />
 							<M.Typography component="span" variant="h6">Na busca pela excelência automotiva, mergulhamos fundo para revelar os segredos das máquinas mais potentes. Prepare-se para uma viagem emocionante pelo desempenho automotivo de última geração.</M.Typography>
 						</M.CardContent>
 					</M.Card>

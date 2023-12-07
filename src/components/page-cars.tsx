@@ -19,14 +19,14 @@ export default function PageCar({ dataCar } : { dataCar: DataElementType}) {
 					display="flex" 
 					justifyContent="center"
 					alignItems="end"
-					minHeight={smDown ? 325 : "110vh"}
-					paddingTop={smDown ? "40vh" : 0}
+					height={smDown ? "65vh" : "100vh"}
+					padding="2rem 0 0"
 				>
 					<Image
 						src={`/${dataCar.name}.png`}
 						priority
-						width={smDown ? 430 : 750}
-						height={smDown ? 250 : 370}
+						width={smDown ? 350 : 666}
+						height={smDown ? 196 : 375}
 						alt="Picture of the author"
 					/>
 				</M.Grid>
@@ -40,13 +40,23 @@ export default function PageCar({ dataCar } : { dataCar: DataElementType}) {
 					alignItems="center"
 				>
 					<M.Card sx={{ 
-						width: smDown ? "85%" : "60%", 
+						width: smDown ? "85%" : "60%",
 						padding: smDown ? "2rem 0.5rem" : "1.5rem", 
-						margin: smDown ? "2rem 2rem" : "0 0 5rem"
+						margin: smDown ? "0rem 0 4rem" : "2rem 0 5rem"
 					}}>
 						<M.Box textAlign="center" paddingBottom="2rem">
-							<M.Typography component="h2" variant="h2" textTransform="capitalize">{dataCar.name}</M.Typography>
-							<M.Typography component="p" variant="h6">{dataCar.description}</M.Typography>
+							<M.Typography 
+								component="h3" 
+								variant="h3"
+								fontWeight={700}
+								textTransform="capitalize"
+								paddingBottom="1rem"
+							>{dataCar.name}</M.Typography>
+							<M.Typography 
+								component="p"
+								variant="h6"
+								paddingX="0.4rem"
+							>{dataCar.description}</M.Typography>
 						</M.Box>
 						<StatusCar data={dataCar} />
 					</M.Card>
