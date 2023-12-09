@@ -1,8 +1,8 @@
 # AutoV
 
-Uma aplicação de página única (SPA) de carros esportivos, com versão mobile e desktop.
+Uma aplicação de página única (SPA) voltada para carros esportivos, com versões otimizadas para dispositivos mobile e desktop.
 
-O projeto é de minha autoria e foi inspirado em outras aplicações existentes, adaptando seus designs e recursos. A aplicação foi construída utilizando as tecnologias TypeScript, Next, Material-UI (MUI).
+O projeto é de minha autoria e foi inspirado em outras aplicações já existentes, adaptando seus designs e recursos. A aplicação foi desenvolvida utilizando tecnologias como TypeScript, Next e Material-UI (MUI).
 
 ## Screenshots
 
@@ -12,10 +12,10 @@ O projeto é de minha autoria e foi inspirado em outras aplicações existentes,
 
 ## 🎯 Objetivos
 
-O objetivo deste projeto foi desenvolver a aplicação com Next, utilizando a linguagem TypeScript e estilização com Material-UI.
+O objetivo deste projeto foi desenvolver a aplicação utilizando Next, empregando a linguagem TypeScript e aplicando estilos com Material-UI.
 
-Os usuários podem:
-> - Visualizar a aplicação independente do seu dispositivo mobile ou desktop
+Os usuários têm a capacidade de:
+> - Visualizar a aplicação de maneira independente, seja em dispositivos mobile ou desktop.
 
 </br>
 
@@ -29,25 +29,22 @@ Os usuários podem:
 
 ## 🧠 Meu aprendizado
 
-<!-- O principal desafio desse projeto certamente foi criar e configurar um servidor. Minha base de estudos é pautada por JavaScript. Nada como buscar ter meu primeiro contato com o back-end usando uma linguagem familiar, dessa forma, o Node me ajudou bastante, já que essa linguagem é essencialmente o JavaScript do lado do servidor.
+Este projeto proporcionou minha primeira experiência com o framework Next. Sem dúvida, o que mais me chamou a atenção na ferramenta, além de toda facilidade no desenvolvimento, foi a combinação de renderização do lado do servidor (SSR) e renderização do lado do cliente (CSR), que oferecem uma fluidez imensa à aplicação.
 
-```js
-const express = require("express")
-const newsRouter = require("./routes/news")
-const topNewsRouter = require("./routes/top-news")
-const app = express()
+<img src="./public/next.avif" width="800">
 
-const PORT = process.env.PORT || 4001
+fonte: [Documentação](https://nextjs.org/docs/app/building-your-application/routing)
 
-app.use("/news", newsRouter)
-app.use("/top-news", topNewsRouter)
+Gostaria de destacar a abordagem do framework em relação às rotas, pois tudo é muito intuitivo. A estrutura de pastas é utilizada para definir as rotas, como mostrado na imagem acima, cada pasta representa uma rota.
 
-app.listen(PORT, () => {
-    console.log("Server running in port: " + PORT)
-})
+```ts
+export default function Dashboard() {...
+}
 ```
 
-Com o auxílio do Express, podemos criar e configurar nosso servidor de maneira fácil. Primeiramente, é necessário instanciar o módulo Express, criar uma porta e executar o servidor usando a função 'listen()'. -->
+A pasta por si só não concederá acesso à rota; é necessário um arquivo page.jsx/tsx. Dentro desse arquivo, precisamos criar um componente com o nome da rota desejada.
+
+[Saiba Mais!](https://nextjs.org/docs)    
 
 </br>
 
